@@ -17,7 +17,7 @@ My coding diary >> Getting started with Redux.
 	a modal. For that, we have "props". To work together and to manage state together, components pass `props` between each other, 
 	building a chain of props.
 	Finally, we have the app-wide state. These are states that affect most, if not all components in an app.
-	A good example for that is the user authentication status. A user signs in, and the app changes: a new nav bar is displayed,
+	A good example for that is the user authentication status. A the user signs in, and the app changes: a new nav bar is displayed,
 	more options to choose from are shown etc. To manage the status, we can, again, use a prop chain. That, however, can
 	become cumbersome. 
 	
