@@ -58,7 +58,7 @@ My coding diary >> Getting started with Redux.
 		when this happens, subscripted components get notifed so that they are able to update their UI. That's how Redux works.
   - How does this look like in code?<br>
     I made the first careful steps outside of React (Redux also works outside of React).
-    Here's a [video](https://youtu.be/H9nXFXTi3go) of me trying to make sense of Redux.[^3] 
+    Here's a [video](https://youtu.be/H9nXFXTi3go) of me _trying_ to make sense of Redux.[^3] 
     
 
 		
