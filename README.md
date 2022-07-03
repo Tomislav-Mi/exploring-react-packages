@@ -50,7 +50,7 @@ My coding diary >> Getting started with Redux.
 		- Okay. On one side, we have our component with a subscription to the central store that allows the component
 		to know that a change occurred. On the other side, we have a reducer function which is capable of updating the central data store.
 		How to connect these two elements? 
-		Ultimately, it will be the component that should trigger some data change. Trigger is a good word for that. Because we have third concept here.
+		Ultimately, it will be the component that should trigger some data change. Trigger is a good word for that. Because we have a third concept here.
 		- Actions. Components dispatch "actions" to communicate with the Reduce function. An action is, essentially, a simple JavaScript object which describes the "action" the reducer should perform. 
 		Redux forwards actions to the reducer, reads the discription of that desired operation, and then this operation is performed by the reducer. 
 	- To sum it up, components subscribe to the central data store. A status change occurs. The component describes what should be done by dispatching an action. Then, this action is forwarded to 
