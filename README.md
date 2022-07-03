@@ -45,15 +45,14 @@ My coding diary >> Getting started with Redux.
 		manipulate data in the store. We can and should have a subscription, but we must not have a data flow in the other direction.
 		At least not a direct data flow. 
 		- The Reducer Concept. To manipulate data in the store, we use a so called "Reducer Function".[^2] This function is responsible 
-		for mutating the store data. It's a general concept of functions that take some input and then transform that input - they "reduce" that input.
-		For instance, they can reduce a list of numbers to the sum of that numbers. 
+		for mutating the store data. It's a general concept of functions that take some input and then transform that input.
 		- Okay. On one side, we have our component with a subscription to the central store that allows the component
 		to know that a change occurred. On the other side, we have a reducer function which is capable of updating the central data store.
 		How to connect these two elements? 
 		Ultimately, it will be the component that should trigger some data change. Trigger is a good word for that. Because we have a third concept here.
 		- Actions. Components dispatch "actions" to communicate with the Reduce function. An action is, essentially, a simple JavaScript object which describes the "action" the reducer should perform. 
-		Redux forwards actions to the reducer, reads the discription of that desired operation, and then this operation is performed by the reducer. 
-	- To sum it up, components subscribe to the central data store. A status change occurs. The component describes what should be done by dispatching an action. Then, this action is forwarded to 
+		Redux forwards actions to the reducer, reads the description of that desired operation, and then this operation is performed by the reducer. 
+	- To sum it up, components subscribe to the central data store. A status change occurs. The component describes what should be done by dspatching an action. Then, this action is forwarded to 
 		the reducer. The reducer, in turn, does what the action instructs the reducer to do. Finally, the reducer provides a new state that will replace the old state in that central data store. And
 		when this happens, subscripted components get notifed so that they are able to update their UI. That's how Redux works.
   - How does this look like in code?<br>
