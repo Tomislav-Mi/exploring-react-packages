@@ -57,7 +57,31 @@ My coding diary >> Getting started with Redux.
 		when this happens, subscripted components get notifed so that they are able to update their UI. That's how Redux works.
   - How does this look like in code?<br>
     I made the first careful steps outside of React (Redux also works outside of React).
-    Here's a [video](https://youtu.be/H9nXFXTi3go) of me _trying_ to make sense of Redux.[^3] 
+    Here's a [video](https://youtu.be/H9nXFXTi3go) of me _trying_ to make sense of Redux.[^3] <br>
+    One thing that I forgot to mention in the video is the reason why we have a second argument (`action`) in `counterReducer`. In the reducer, I can go into that action to check if `action.type === 'increment'. If that is true, 
+    then I can return the `{counter: state.counter + 1}` object. Otherwise, I return the initial state. Or I can even return other actions by, first, adding an action of type 'decrement', like so:
+
+	```javascript
+	store.dispatch({type:'decrement'});
+	```
+	I, then, add a second `if` check in `counterReducer`:
+	
+	```javascript
+	const counterReducer = (state = {counter: 0}, action) => {
+		if (action.type === 'increment') {
+			return {
+				counter:state.counter + 1,
+			};
+		}
+		
+		if (action.type === 'decrement') {
+			return {
+				counter:state.counter - 1,
+			};
+		}	
+	}
+	```
+
     
 
 		
