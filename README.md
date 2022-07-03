@@ -58,9 +58,10 @@ My coding diary >> Getting started with Redux.
 		when this happens, subscripted components get notifed so that they are able to update their UI. That's how Redux works.
   - How does this look like in code?<br>
     I made the first careful steps outside of React (Redux also works outside of React).
-    Here's a [video](https://youtu.be/H9nXFXTi3go) of me trying to make sense of Redux. 
+    Here's a [video](https://youtu.be/H9nXFXTi3go) of me trying to make sense of Redux.[^3] 
     
 
 		
 [^1]: State is data that changes and effects the UI.
 [^2]: That has nothing to do with the useReducer( ) hook.
+[^3]: Redux createStore( ) is deprecated. Kind of. https://stackoverflow.com/questions/71944111/redux-createstore-is-deprecated-cannot-get-state-from-getstate-in-redux-ac
