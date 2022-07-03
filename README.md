@@ -8,14 +8,14 @@ My coding diary >> Getting started with Redux.
 	First, we have the local state that belongs to a single component.[^1] A good example: 
 	When we listen to a user input, and we use `useState()` to store that input with every keystroke
 	in a state variable. Like for Berghain, the rule is: What happens in the component
-	stays in the component. 
+	stays in the component.<br> 
 	Then, we have the cross-component state. Yes, the name says it all: it's a state that affects multiple components.
 	An example for that is a button that opens and closes a modal overlay. Such a modal component
 	might affect multiple components. The trigger for opening the modal will probably not be inside
 	of the modal. However, the modal might be closed by clicking a button that _is_ inside
 	of that modal. You see, we have multiple components working together to display and hide
 	a modal. For that, we have "props". To work together and to manage state together, components pass `props` between each other, 
-	building a chain of props.
+	building a chain of props.<br>
 	Finally, we have the app-wide state. These are states that affect most, if not all components in an app.
 	A good example for that is the user authentication status. A the user signs in, and the app changes: a new nav bar is displayed,
 	more options to choose from are shown etc. To manage the status, we can, again, use a prop chain. That, however, can
