@@ -59,7 +59,7 @@ My coding diary >> Getting started with Redux.
     I made the first careful steps outside of React (Redux also works outside of React).
     Here's a [video](https://youtu.be/H9nXFXTi3go) of me _trying_ to make sense of Redux.[^3] <br>
     One thing that I forgot to mention in the video is the reason why we have a second argument (`action`) in `counterReducer`. In the reducer, I can go into that action to check if `action.type === 'increment'`. If that is true, 
-    then I can return the `{counter: state.counter + 1}` object. Otherwise, I return the initial state. Or I can even return another action by, first, adding an action of type 'decrement' somewhere outside of `counterReducer`, like so:
+    then I can return the `{counter: state.counter + 1}` object. Otherwise, I return the initial state. Or I can even return another action by, first, adding an action of type `'decrement'` somewhere outside of `counterReducer`, like so:
 
 	```javascript
 	store.dispatch({type:'decrement'});
