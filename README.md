@@ -100,6 +100,7 @@ change again the state to rendersomething else. BUT, since there is the
 "React Router" and the react-router-dom package, React will do this
 for us.  <br><br>
 Here's a [video](https://youtu.be/wn6ClcnDLh0) of me talking about the basics of React Router. 
+- `Link` component from react-router-dom. The `Link` component allows us to add links that, when clicked, prevent React to make a new HTML request. With `<Link to='/welcome'>Click this link!</Link>`, we will stay on the initial HTML.
 
 		
 [^1]: State is data that changes and effects the UI.
