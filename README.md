@@ -54,7 +54,7 @@ My coding diary >> Getting started with Redux.
 		Redux forwards actions to the reducer, reads the description of that desired operation, and then this operation is performed by the reducer. 
 	- To sum it up, components subscribe to the central data store. A status change occurs. The component describes what action type should be targeted by dispatching an action. Then, this action is forwarded to 
 		the reducer. The reducer, in turn, hits the target the action specified. Finally, the reducer provides a new state that will replace the old state in that central data store. And
-		when this happens, subscripted components get notifed so that they are able to update their UI. That's how Redux works on the most basic level.
+		when this happens, subscripted components get notified so that they are able to update their UI. That's how Redux works on the most basic level.
   - How does this look like in code?<br>
     I made the first careful steps outside of React (Redux also works outside of React).
     Here's a [video](https://youtu.be/H9nXFXTi3go) of me _trying_ to make sense of Redux.[^3] <br>
