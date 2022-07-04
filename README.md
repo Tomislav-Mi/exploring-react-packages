@@ -51,10 +51,10 @@ My coding diary >> Getting started with React packages
 		Ultimately, it will be the component that should trigger some data change. Trigger is a good word for that. Because we have a third concept here.
 		- Actions. Components dispatch "actions" to communicate with the Reduce function. An action is, essentially, a simple JavaScript object which describes the "action" the reducer should perform. 
 		Redux forwards actions to the reducer, reads the description of that desired operation, and then this operation is performed by the reducer. 
-	- To sum it up, components subscribe to the central data store. A status change occurs. The component describes what action type should be targeted by dispatching an action. Then, this action is forwarded to 
+- To sum it up, components subscribe to the central data store. A status change occurs. The component describes what action type should be targeted by dispatching an action. Then, this action is forwarded to 
 		the reducer. The reducer, in turn, hits the target which the action has specified. Finally, the reducer provides a new state that will replace the old state in that central data store. And
 		when this happens, subscripted components get notified so that they are able to update their UI. That's how Redux works on the most basic level.
-  - How does this look like in code?<br>
+- How does this look like in code?<br>
     I made the first careful steps outside of React (Redux also works outside of React).
     Here's a [video](https://youtu.be/H9nXFXTi3go) of me _trying_ to make sense of Redux.[^3] <br>
     One thing that I forgot to mention in the video is the reason why we have a second parameter (`action`) in `counterReducer`. In the reducer, I can go into that action to check if the passed-in argument is `action.type === 'increment'`. If that is true, 
@@ -88,17 +88,17 @@ we can change the visible content without fetching a new HTML file.<br>
 How do we handle different paths in React? To illustrate how React approaches this problem, lets looks at this pseudo code: 
 ```
 If (new domain path) {
-	return component
+	return respective component
 	};
 ```
-I chose this pseudo code, because we could compare react routing to conditionally rendering. In conditionally rendering, we use "state" to conditionally show a 
-certain component. In routing, we want to do same thing but for the paths(!)
+- I chose this pseudo code, because we can compare react routing to conditionally rendering. In conditionally rendering, we use "state" to conditionally show a 
+certain component. In routing, we want to do the same thing but for the paths(!)
 in the URL. I believe, if we wanted to, we could write our own code
 where we check what's in the URL, and then set our own state, and listen
 to clicks, and prevent the browser default of sending a request, and then
 change again the state to rendersomething else. BUT, since there is the
 "React Router" and the react-router-dom package, React will do this
-for us.  <br>
+for us.  <br><br>
 Here's a [video](https://youtu.be/wn6ClcnDLh0) of me talking about the basics of React Router. 
 
 		
