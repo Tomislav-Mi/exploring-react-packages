@@ -82,7 +82,7 @@ My coding diary >> Getting started with React packages
 	```
 
 ## REACT ROUTER 
-- Important to understand: Pages in react are not loaded like in traditional multi-page routing where you have one HTML file for every URL. In React, you have one initial HTML request & response. Again, one-page routing means that one initial HTML request & response is made. 
+- Important to understand: Pages in React are not loaded like in traditional multi-page routing where you have one HTML file for every URL. In React, you have one initial HTML request & response. Again, one-page routing means that one initial HTML request & response is made. 
 To handle page (URL) changes in React, we need some sort of client-side code. That way,
 we can change the visible content without fetching a new HTML file.<br>
 How do we handle different paths in React? To illustrate how React approaches this problem, lets looks at this pseudo code: 
