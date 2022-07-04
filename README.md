@@ -100,7 +100,31 @@ change again the state to rendersomething else. BUT, since there is the
 "React Router" and the react-router-dom package, React will do this
 for us.  <br><br>
 Here's a [video](https://youtu.be/wn6ClcnDLh0) of me talking about the basics of React Router. 
-- `Link` component from react-router-dom. The `Link` component allows us to add links that, when clicked, prevent React to make a new HTML request. With `<Link to='/welcome'>Click this link!</Link>`, we will stay on the initial HTML.
+- `Link` component from react-router-dom. The `Link` component allows us to add links that, when clicked, prevent React to make a new HTML request. With `<Link to='/welcome'>Click this link!</Link>`, we will stay on the initial HTML, but it will look like we landed on a new page. 
+- `NavLink`. The same like Link, but allows you to use `activeClassName`. This will enable you to link it to a CSS class you have defined to mark the active navbar item. 
+- Dynamic Routes with Params. Extract route params with the custom react-router hook `useParams`. This will return an object that will have key-value pairs where the keys are dynamic segments leading to that page.
+	- `Switch`. The `Switch` component, wrapped around your route components, makes sure that only one of your route components is active. And it will be the round whose path is matched first. The additionally `exact` prop will make to match the exact path, i. e. the full path of a component.
+```javascript
+function App() {
+  return (
+    <div>
+        <MainHeader />
+        <main>
+            <Switch>
+                <Route path="/welcome">
+                    <Welcome />
+                </Route>
+                <Route path="/cats" exact>
+                    <Cats />
+                </Route>
+                <Route path="/cats/:catName">
+                    <CatDetail />
+                </Route>
+            </Switch>
+        </main>
+    </div>
+  );
+```
 
 		
 [^1]: State is data that changes and effects the UI.
