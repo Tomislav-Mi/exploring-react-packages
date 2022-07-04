@@ -1,9 +1,8 @@
-# Exploring-redux (React diary)
-My coding diary >> Getting started with Redux.
+# Exploring React Packages
+My coding diary >> Getting started with React packages
 
-## What I've learned
-- REDUX
-	- States.
+## REDUX
+- *States.*<br>
 	States in React can be divided by their reach.<br>
 	First, we have the local state that belongs to a single component.[^1] A good example: 
 	When we listen to a user input, and we use `useState()` to store that input with every keystroke
@@ -21,18 +20,18 @@ My coding diary >> Getting started with Redux.
 	more options to choose from are shown etc. To manage the status, we can, again, use a prop chain. That, however, can
 	become cumbersome. 
 	
-	- React Context.
+- *React Context.* <br>
 	"Context" is a build-in feature in React that makes managing cross-component or app-wide states easier. You can avoid prop chains
 	by having a central space where you manage your states. 
 	
-	- Redux - An alternative to React Context.
+- *Redux - An alternative to React Context.* <br>
 	Redux solves the same problem. Yes, same problem. So why do we need Redux when we already have Context? Well, Context has
 	_potential_ disadvantages for your app. They might not matter, and if they don't matter you don't need Redux. 
 	The potential disadvantages are:
 		- Complexity. React Context can become complex, esp. when you're building a large app (e. g. nested JSX).
 		- Performance. The performance can suffer for changes that happen frequently. 
 	
-	- Core Redux concepts.
+- *Core Redux concepts.* <br>
 	Redux has one central state store. One store to rule them all.
 	In there, you store authentication state, user input state... Whatever app wide states you have, 
 	they belong in that one store. 
@@ -82,7 +81,25 @@ My coding diary >> Getting started with Redux.
 	}
 	```
 
-    
+## REACT ROUTER 
+- Important to understand: Pages in react are not loaded like in traditional multi-page routing where you have one HTML file for every URL. In React, you have one initial HTML request & response. Again, one-page routing means that one initial HTML request & response is made. 
+To handle page (URL) changes in React, we need some sort of client-side code. That way,
+we can change the visible content without fetching a new HTML file.<br>
+How do we handle different paths in React? To illustrate how React approaches this problem, lets looks at this pseudo code: 
+```
+If (new domain path) {
+	return component
+	};
+```
+I chose this pseudo code, because we could compare react routing to conditionally rendering. In conditionally rendering, we use "state" to conditionally show a 
+certain component. In routing, we want to do same thing but for the paths(!)
+in the URL. I believe, if we wanted to, we could write our own code
+where we check what's in the URL, and then set our own state, and listen
+to clicks, and prevent the browser default of sending a request, and then
+change again the state to rendersomething else. BUT, since there is the
+"React Router" and the react-router-dom package, React will do this
+for us.  <br>
+Here's a [video](https://youtu.be/wn6ClcnDLh0) of me talking about the basics of React Router. 
 
 		
 [^1]: State is data that changes and effects the UI.
