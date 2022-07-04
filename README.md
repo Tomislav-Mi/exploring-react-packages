@@ -24,7 +24,7 @@ My coding diary >> Getting started with React packages
 	"Context" is a build-in feature in React that makes managing cross-component or app-wide states easier. You can avoid prop chains
 	by having a central space where you manage your states. 
 	
-- *Redux - An alternative to React Context.* <br>
+- *Redux - an alternative to React Context.* <br>
 	Redux solves the same problem. Yes, same problem. So why do we need Redux when we already have Context? Well, Context has
 	_potential_ disadvantages for your app. They might not matter, and if they don't matter you don't need Redux. 
 	The potential disadvantages are:
@@ -35,21 +35,21 @@ My coding diary >> Getting started with React packages
 	Redux has one central state store. One store to rule them all.
 	In there, you store authentication state, user input state... Whatever app wide states you have, 
 	they belong in that one store. 
-		- Subscriptions. 
+	- Subscriptions. 
 		When a state in the central store changes we want to know about it and pass this information to our components.
 		For that, a component sets up a "subscription" to our central store. After the subscription, the component gets a notification
 		whenever a status changes. The component, then, gets the specific information of that change, for instance,
 		the current authentication status. That's how we get data out of the store.
-		- Now we also need a way to change the data in the store. But, first, here's an important rule for that: components should never 
+	- Now we also need a way to change the data in the store. But, first, here's an important rule for that: components should never 
 		manipulate data in the store. We can and should have a subscription, but we must not have a data flow in the other direction.
 		At least not a direct data flow. 
-		- The Reducer Concept. To manipulate data in the store, we use a so called "Reducer Function".[^2] This function is responsible 
+	- The Reducer Concept. To manipulate data in the store, we use a so called "Reducer Function".[^2] This function is responsible 
 		for mutating the store data. It's a general concept of functions that take some input and then transform that input.
-		- Okay. On one side, we have our component with a subscription to the central store that allows the component
+	- Okay. On one side, we have our component with a subscription to the central store that allows the component
 		to know that a change occurred. On the other side, we have a reducer function which is capable of updating the central data store.
 		How to connect these two elements? 
 		Ultimately, it will be the component that should trigger some data change. Trigger is a good word for that. Because we have a third concept here.
-		- Actions. Components dispatch "actions" to communicate with the Reduce function. An action is, essentially, a simple JavaScript object which describes the "action" the reducer should perform. 
+	- Actions. Components dispatch "actions" to communicate with the Reduce function. An action is, essentially, a simple JavaScript object which describes the "action" the reducer should perform. 
 		Redux forwards actions to the reducer, reads the description of that desired operation, and then this operation is performed by the reducer. 
 - To sum it up, components subscribe to the central data store. A status change occurs. The component describes what action type should be targeted by dispatching an action. Then, this action is forwarded to 
 		the reducer. The reducer, in turn, hits the target which the action has specified. Finally, the reducer provides a new state that will replace the old state in that central data store. And
