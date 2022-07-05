@@ -154,4 +154,4 @@ When users find themselves on "our-domain.com/", they will be redirected to "our
 [^1]: State is data that changes and effects the UI.
 [^2]: That has nothing to do with the useReducer( ) hook.
 [^3]: Redux createStore( ) is deprecated. Kind of. https://stackoverflow.com/questions/71944111/redux-createstore-is-deprecated-cannot-get-state-from-getstate-in-redux-ac
-[^4]: React router in combination wiht switch looks by default at the beginning of your path and renders the first item that matches what it was looking for. So if you have two path that start with "/cats" the first one will be rendered. The second one, however, will be ignored.
+[^4]: React router in combination with switch looks by default at the beginning of your path and renders the first item that matches what it was looking for. So if you have two path that start with "/cats" the first one will be rendered. The second one, however, will be ignored.
