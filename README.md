@@ -103,7 +103,7 @@ Here's a [video](https://youtu.be/wn6ClcnDLh0) of me talking about the basics of
 - `Link` component from react-router-dom. The `Link` component allows us to add links that, when clicked, prevent React to make a new HTML request. With `<Link to='/welcome'>Click this link!</Link>`, we will stay on the initial HTML, but it will look like we landed on a new page. 
 - `NavLink`. The same like Link, but allows you to use `activeClassName`. This will enable you to link it to a CSS class you have defined to mark the active navbar item. 
 - Dynamic Routes with Params. Extract route params with the custom react-router hook `useParams`. This will return an object that will have key-value pairs where the keys are dynamic segments leading to that page.
-	- `Switch`. The `Switch` component, wrapped around your route components, makes sure that only one of your route components is active. It goes through your components and it stops, it switsches itself off, at the route whose path is matched first. The additionally `exact` prop will match the exact path, i. e. the full path of a component.
+	- `Switch`. The `Switch` component, wrapped around your route components, makes sure that only one of your route components is active. The switch goes through your components and it stops, it switsches itself off, at the route whose path is matched first, and that one is then rendered. The additionally `exact` prop will match the exact path, i. e. the full path of a component.[^4]
 ```javascript
 function App() {
   return (
@@ -154,3 +154,4 @@ When users find themselves on "our-domain.com/", they will be redirected to "our
 [^1]: State is data that changes and effects the UI.
 [^2]: That has nothing to do with the useReducer( ) hook.
 [^3]: Redux createStore( ) is deprecated. Kind of. https://stackoverflow.com/questions/71944111/redux-createstore-is-deprecated-cannot-get-state-from-getstate-in-redux-ac
+[^4]: React router in combination wiht switch looks by default at the beginning of your path and renders the first item that matches what it was looking for. So if you have two path that start with "/cats" the first one will be rendered. The second one, however, will be ignored.
