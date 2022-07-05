@@ -125,6 +125,30 @@ function App() {
     </div>
   );
 ```
+- Nested routes. When you have conditional content, like for example on a welcome page that should change depending on whether the user is new or not, then you want to be able to render different routes. Like so:
+`domain.com/welcome`, or with a new user: `domain.com/welcome/new-user`
+For that, we use nested routes.
+```javascript
+const Welcome = () => {
+    return (
+        <section>
+            <h1>Welcome!</h1>
+            <Route path="/welcome/new-user">
+                <p>Welcome, new user!</p>
+            </Route>
+        </section>
+    )
+};
+```
+
+- Redirecting the user. We can redirect the user. For that, we define another route and use another custome component provided by react-router-dom, the `Redirect`. In there, you can specify where the user should be redirected to. For example:
+```javascript
+<Route path="/" exact>
+    <Redirect to="/welcome"></Redirect>
+</Route>
+```
+When users find themselves on "our-domain.com/", they will be redirected to "our-domain.com/welcome". Please note that `exact` is quite important here, because otherwise every route would be triggered that starts with `/`, and we would have created an infinite loop.
+
 
 		
 [^1]: State is data that changes and effects the UI.
