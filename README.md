@@ -96,7 +96,7 @@ certain component. In routing, we want to do the same thing but for the paths(!)
 in the URL. I believe, if we wanted to, we could write our own code
 where we check what's in the URL, and then set our own state, and listen
 to clicks, and prevent the browser default of sending a request, and then
-change again the state to rendersomething else. BUT, since there is the
+change again the state to render something else. BUT, since there is the
 "React Router" and the react-router-dom package, React will do this
 for us.  <br><br>
 Here's a [video](https://youtu.be/wn6ClcnDLh0) of me talking about the basics of React Router. <br><br>
