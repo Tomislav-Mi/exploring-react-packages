@@ -28,8 +28,8 @@ My coding diary >> Getting started with React packages
 	Redux solves the same problem. Yes, same problem. So why do we need Redux when we already have Context? Well, Context has
 	_potential_ disadvantages for your app. They might not matter, and if they don't matter you don't need Redux. 
 	The potential disadvantages are:
-		- Complexity. React Context can become complex, esp. when you're building a large app (e. g. nested JSX).
-		- Performance. The performance can suffer for changes that happen frequently. 
+	- Complexity. React Context can become complex, esp. when you're building a large app (e. g. nested JSX).
+	- Performance. The performance can suffer for changes that happen frequently. 
 	
 - *Core Redux concepts.* <br>
 	Redux has one central state store. One store to rule them all.
