@@ -147,7 +147,7 @@ const Welcome = () => {
     <Redirect to="/welcome"></Redirect>
 </Route>
 ```
-When users find themselves on "our-domain.com/", they will be redirected to "our-domain.com/welcome". Please note that `exact` is quite important here, because otherwise every route would be triggered that starts with `/`, and we would have created an infinite loop.
+When users find themselves on "our-domain.com/", they will be redirected to "our-domain.com/welcome". Please note that `exact` is quite important here, because otherwise every route would be triggered that starts with `/`, and we would have created an infinite loop. THAT IS ONLY TRUE FOR v5. Version 6 avoids this trap.
 
 
 		
