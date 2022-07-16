@@ -1,4 +1,4 @@
-# Exploring React Packages
+# Exploring React Packages and Automated Tests
 My coding diary >> Getting started with React packages
 
 ## REDUX
@@ -149,8 +149,47 @@ const Welcome = () => {
 ```
 When users find themselves on "our-domain.com/", they will be redirected to "our-domain.com/welcome". Please note that `exact` is quite important here, because otherwise every route would be triggered that starts with `/`, and we would have created an infinite loop. THAT IS ONLY TRUE FOR v5. Version 6 avoids this trap.
 
-
-		
+## Automated Tests
+- Unit Tests <br>
+	- Test the individual building blocks in isolation (functions, components)
+	- Most common and most important kind of test
+	
+- Integration Tests <br>
+	- Test the combi of multiple building blocks
+	- Important
+	
+- End-to-End Tests (e2e) <br>
+	- Test complete scenarios in an app
+	- Like manual test, only automated
+	
+- What and How to Test <br>
+	- What?
+		- Test the different building blocks, i. e. unit tests
+	- How?
+		- Test success and erros cases
+		- Test rare results
+- Required Tools <br>
+	- Jest: for running our tests and asserting the result
+	- React Testing Library: For simulating (rendering) our React app
+- Running the first test <br>
+	- Let's take a look at the test that comes with a new React project:
+	```Javascript
+	test('renders learn react link', () => {
+  	render(<App />);
+  	const linkElement = screen.getByText(/learn react/i);
+  	expect(linkElement).toBeInTheDocument();
+	});
+	
+	```
+	- The first argument is a description of the test: `'renders learn react link'`
+	- The second argument is a an anonymous function which contains the actual test and code. This is the code that will be executed once I run the test. 
+		- In this function, I `render( )` the `<App />` component with the imported fn from the `'@testing-library/react'`
+		- Then, I get hold of an element on the virtual screen with `screen`
+		- Lastly, I `expect` the element `toBeInTheDocument`. 
+			- If it is not there, the test will fail.
+	- To run the test, we `npm test` in the terminal.
+	
+	
 [^1]: State is data that changes and effects the UI.
 [^2]: That has nothing to do with the useReducer( ) hook.
 [^3]: Redux createStore( ) is deprecated. Kind of. https://stackoverflow.com/questions/71944111/redux-createstore-is-deprecated-cannot-get-state-from-getstate-in-redux-ac
