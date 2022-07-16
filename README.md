@@ -188,6 +188,7 @@ When users find themselves on "our-domain.com/", they will be redirected to "our
 		- Lastly, I `expect` the element `toBeInTheDocument`. 
 			- If it is not there, the test will fail.
 	- To run the test, we `npm test` in the terminal.
+	- Here's a [video](https://youtu.be/PG2LBFe8QCA) where I talk about setting up a first test. 
 	
 	
 [^1]: State is data that changes and effects the UI.
